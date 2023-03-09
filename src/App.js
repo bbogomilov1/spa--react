@@ -7,7 +7,7 @@ import ErrorPage from "./pages/Error";
 import ProductDetailPage from "./pages/ProductDetail";
 
 const routeChildren = [
-  <Route path="" element={<HomePage />} />,
+  <Route index="true" element={<HomePage />} />,
   <Route path="products" element={<ProductsPage />} />,
   <Route path="products/:productId" element={<ProductDetailPage />} />,
 ];
