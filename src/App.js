@@ -3,6 +3,7 @@ import { createRoutesFromElements } from "react-router-dom/dist";
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
 import RootLayout from "./pages/Root";
+import ErrorPage from "./pages/Error";
 
 const routeChildren = [
   <Route path="/" element={<HomePage />} />,
@@ -10,7 +11,7 @@ const routeChildren = [
 ];
 
 const routeDefinitions = createRoutesFromElements(
-  <Route>
+  <Route errorElement={<ErrorPage />}>
     <Route path="/" element={<RootLayout />} children={routeChildren} />
   </Route>
 );
